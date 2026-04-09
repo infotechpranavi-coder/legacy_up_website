@@ -119,25 +119,32 @@
 	if($('#contact-form').length){
 		$('#contact-form').validate({
 			rules: {
-				username: {
+				name: {
 					required: true
 				},
 				email: {
 					required: true,
 					email: true
 				},
-				phone: {
-					required: true
-				},
-				subject: {
+				telephone: {
 					required: true
 				},
 				message: {
 					required: true
 				}
+			},
+			submitHandler: function(form) {
+				form.submit();
 			}
 		});
 	}
+
+	// Global function called by the onsubmit attribute in HTML
+	window.handleFormSubmit = function(event, formId) {
+		// The validation plugin handles the submission via submitHandler
+		// This function is kept to prevent "undefined" errors
+		return true;
+	};
 
 	//Fact Counter + Text Count
 	if($('.count-box').length){
