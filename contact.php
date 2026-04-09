@@ -6,7 +6,8 @@ if(isset($_POST['email'])) {
  
     // EDIT THE 2 LINES BELOW AS REQUIRED
  
-    $email_to = "info@legacymfs.in";
+    // Original Email: info@legacymfs.in
+    $email_to = "sales@mariyaenterprises.co.in";
  
     $email_subject = "New Enquiry";
  
